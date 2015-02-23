@@ -47,12 +47,12 @@ void rellenar_datos (struct TPlayer jugador[N]){
 void guardar_datos (struct TPlayer jugador[N],FILE *hoja){
     for(int i=0; i<N; i++){
 	
-	fwrite(NOMBRE, sizeof(char), M, hoja);
-	fwrite(&FUERZA, sizeof(int), 2, hoja);
-	fwrite(&RESISTENCIA, sizeof(int), 2, hoja);
-	fwrite(&VELOCIDAD, sizeof(int), 2, hoja);
-	fwrite(&DINERO, sizeof(int), 2, hoja);
-	fwrite(&PUNTOS, sizeof(int), 2, hoja);
+	fwrite(NOMBRE, sizeof(NOMBRE), M, hoja);
+	fwrite(&FUERZA, sizeof(int), 1, hoja);
+	fwrite(&RESISTENCIA, sizeof(int), 1, hoja);
+	fwrite(&VELOCIDAD, sizeof(int), 1, hoja);
+	fwrite(&DINERO, sizeof(int), 1, hoja);
+	fwrite(&PUNTOS, sizeof(int), 1, hoja);
 
 	// fprintf para .txt, fwrite para .bin
 	// 
@@ -81,6 +81,19 @@ int main (int argc, char *argv[]) {
 	fread(jugador, sizeof(struct TPlayer), N, hoja);
 
     }
+
+    // Comprobación de los datos, si se han introducido o si se van a leer
+    for(int i=0; i<N; i++)
+    {
+	printf("Nombre %i: %s\n",i+1, NOMBRE);
+	printf("Fuerza: %i\n",FUERZA);
+	printf("Resistencia: %i\n",RESISTENCIA);
+	printf("Velocidad: %i\n",VELOCIDAD);
+	printf("Dinero: %i\n",DINERO);
+	printf("Puntos: %i\n",PUNTOS);
+
+    }
+    
     fclose(hoja);
     return EXIT_SUCCESS;
 }
