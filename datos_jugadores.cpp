@@ -12,15 +12,15 @@
 #define PUNTOS jugador[i].puntos
 
 
-typedef struct Skills {
+typedef struct TSkills {
     int fuerza;
     int resistencia;
     int velocidad;
-}Habilidad;
+}Skills;
 
 typedef struct TPlayer{
     char nombre[M];
-    Habilidad habilidad;
+    Skills habilidad;
     int dinero;
     int puntos;
 }Player;
