@@ -1,10 +1,10 @@
 # ANALISIS
 
-##ACTORES
+## ACTORES
 
 -Heladero
 -Helado (Abstracta)
-    -de naranja
+    de naranja
     -de limon	
     -de vainilla
 -Contenedor
