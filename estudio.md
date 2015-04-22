@@ -21,3 +21,6 @@
     -Ingresa en la caja registradora
 
 El cliente es su propio representante. 
+
+### Contenedor
+    -
